@@ -5,3 +5,15 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+  10.times do
+    users = User.create([{ username: Faker::Internet.user_name, email: Faker::Internet.email, first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, password: Faker::Internet.password, city: "New York" }])
+  end
+
+
+  10.times do
+    instruments = Instrument.create([{ name: Faker::Music.instrument }])
+  end
+
+
+  genres = Genre.create([{ name: "Rock" }, {name: "Pop"}, {name: "Soul"}, {name: "Jazz"}, {name: "Hip Hop"}])

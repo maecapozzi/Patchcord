@@ -1,0 +1,232 @@
+** [Honeybadger] Initializing Honeybadger Error Tracker for Ruby. Ship it! version=3.1.1 framework=rails level=1 pid=64613
+** [Honeybadger] Entering development mode: data will not be reported. level=2 pid=64613
+** [Honeybadger] Initializing Honeybadger Error Tracker for Ruby. Ship it! version=3.1.1 framework=rails level=1 pid=64660
+** [Honeybadger] Entering development mode: data will not be reported. level=2 pid=64660
+** [Honeybadger] Initializing Honeybadger Error Tracker for Ruby. Ship it! version=3.1.1 framework=rails level=1 pid=64720
+** [Honeybadger] Entering development mode: data will not be reported. level=2 pid=64720
+** [Honeybadger] Initializing Honeybadger Error Tracker for Ruby. Ship it! version=3.1.1 framework=rails level=1 pid=64775
+** [Honeybadger] Entering development mode: data will not be reported. level=2 pid=64775
+** [Honeybadger] Initializing Honeybadger Error Tracker for Ruby. Ship it! version=3.1.1 framework=rails level=1 pid=65260
+** [Honeybadger] Entering development mode: data will not be reported. level=2 pid=65260
+  [1m[35m (21.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (21.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(430504088990298855);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20170415125852)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (15.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "username" character varying, "email" character varying, "first_name" character varying, "last_name" character varying, "password" character varying, "city" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170415125852"]]
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateInstruments (20170415125914)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "instruments" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170415125914"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateLinks (20170415130020)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "links" ("id" serial primary key, "url" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170415130020"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateGenres (20170415130029)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "genres" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170415130029"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-04-15 13:15:53 UTC], ["updated_at", 2017-04-15 13:15:53 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(430504088990298855)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+** [Honeybadger] Initializing Honeybadger Error Tracker for Ruby. Ship it! version=3.1.1 framework=rails level=1 pid=65311
+** [Honeybadger] Entering development mode: data will not be reported. level=2 pid=65311
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+** [Honeybadger] Unable to send error report: API key is missing. id=828d61a0-4d90-44c3-8f46-96f77491d93a level=3 pid=65311
+** [Honeybadger] Initializing Honeybadger Error Tracker for Ruby. Ship it! version=3.1.1 framework=rails level=1 pid=65356
+** [Honeybadger] Entering development mode: data will not be reported. level=2 pid=65356
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+** [Honeybadger] Unable to send error report: API key is missing. id=eab79f36-5d9b-4f87-9cbc-ed5c0f65c1ee level=3 pid=65356
+** [Honeybadger] Initializing Honeybadger Error Tracker for Ruby. Ship it! version=3.1.1 framework=rails level=1 pid=65418
+** [Honeybadger] Entering development mode: data will not be reported. level=2 pid=65418
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "first_name", "last_name", "password", "city", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["username", "edwina"], ["email", "johnson.sipes@connsporer.name"], ["first_name", "Jessika"], ["last_name", "Hermiston"], ["password", "1oX93aY22"], ["city", "New York"], ["created_at", 2017-04-15 13:16:33 UTC], ["updated_at", 2017-04-15 13:16:33 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "first_name", "last_name", "password", "city", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["username", "louvenia.zieme"], ["email", "carolanne@effertz.net"], ["first_name", "Opal"], ["last_name", "Bruen"], ["password", "JwTz75IyKdHcN"], ["city", "New York"], ["created_at", 2017-04-15 13:16:33 UTC], ["updated_at", 2017-04-15 13:16:33 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "first_name", "last_name", "password", "city", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["username", "delphia_rosenbaum"], ["email", "lionel@kerluke.org"], ["first_name", "Liana"], ["last_name", "Ward"], ["password", "I5Xj9o3pA"], ["city", "New York"], ["created_at", 2017-04-15 13:16:33 UTC], ["updated_at", 2017-04-15 13:16:33 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "first_name", "last_name", "password", "city", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["username", "hiram.kaulke"], ["email", "gavin@lemke.info"], ["first_name", "Liana"], ["last_name", "Kuhn"], ["password", "5cCzK593E7EgHs"], ["city", "New York"], ["created_at", 2017-04-15 13:16:33 UTC], ["updated_at", 2017-04-15 13:16:33 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "first_name", "last_name", "password", "city", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["username", "florida_goldner"], ["email", "adrian_nienow@boehmtorp.name"], ["first_name", "Orin"], ["last_name", "O'Connell"], ["password", "YvMrNdEwYzGyW"], ["city", "New York"], ["created_at", 2017-04-15 13:16:33 UTC], ["updated_at", 2017-04-15 13:16:33 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "first_name", "last_name", "password", "city", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["username", "amparo"], ["email", "gregoria@rolfsoncorkery.co"], ["first_name", "Jensen"], ["last_name", "Blick"], ["password", "M9LqTtSrRq930"], ["city", "New York"], ["created_at", 2017-04-15 13:16:33 UTC], ["updated_at", 2017-04-15 13:16:33 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "first_name", "last_name", "password", "city", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["username", "keshaun"], ["email", "miguel.hahn@dubuque.com"], ["first_name", "Vito"], ["last_name", "Gaylord"], ["password", "9c0b3l8j24Ig"], ["city", "New York"], ["created_at", 2017-04-15 13:16:33 UTC], ["updated_at", 2017-04-15 13:16:33 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "first_name", "last_name", "password", "city", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["username", "oran"], ["email", "dejon_buckridge@mante.info"], ["first_name", "Reilly"], ["last_name", "Durgan"], ["password", "Mc4hPxLtFv9g418s"], ["city", "New York"], ["created_at", 2017-04-15 13:16:33 UTC], ["updated_at", 2017-04-15 13:16:33 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "first_name", "last_name", "password", "city", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["username", "tommie.mcclure"], ["email", "itzel_hills@hirtheschoen.net"], ["first_name", "Greta"], ["last_name", "Russel"], ["password", "RkQhG6ZbN"], ["city", "New York"], ["created_at", 2017-04-15 13:16:33 UTC], ["updated_at", 2017-04-15 13:16:33 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "first_name", "last_name", "password", "city", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["username", "mariela_friesen"], ["email", "dalton.okon@davis.io"], ["first_name", "Orion"], ["last_name", "Kertzmann"], ["password", "Xz47OtA5"], ["city", "New York"], ["created_at", 2017-04-15 13:16:33 UTC], ["updated_at", 2017-04-15 13:16:33 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "instruments" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Acoustic Guitar"], ["created_at", 2017-04-15 13:16:33 UTC], ["updated_at", 2017-04-15 13:16:33 UTC]]
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "instruments" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Saxophone"], ["created_at", 2017-04-15 13:16:33 UTC], ["updated_at", 2017-04-15 13:16:33 UTC]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "instruments" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Ukelele"], ["created_at", 2017-04-15 13:16:33 UTC], ["updated_at", 2017-04-15 13:16:33 UTC]]
+  [1m[35m (4.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "instruments" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Ukelele"], ["created_at", 2017-04-15 13:16:33 UTC], ["updated_at", 2017-04-15 13:16:33 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "instruments" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Cello"], ["created_at", 2017-04-15 13:16:33 UTC], ["updated_at", 2017-04-15 13:16:33 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "instruments" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Organ"], ["created_at", 2017-04-15 13:16:33 UTC], ["updated_at", 2017-04-15 13:16:33 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "instruments" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Clarinet"], ["created_at", 2017-04-15 13:16:33 UTC], ["updated_at", 2017-04-15 13:16:33 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "instruments" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Violin"], ["created_at", 2017-04-15 13:16:33 UTC], ["updated_at", 2017-04-15 13:16:33 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "instruments" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Clarinet"], ["created_at", 2017-04-15 13:16:33 UTC], ["updated_at", 2017-04-15 13:16:33 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "instruments" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Saxophone"], ["created_at", 2017-04-15 13:16:33 UTC], ["updated_at", 2017-04-15 13:16:33 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+** [Honeybadger] Unable to send error report: API key is missing. id=91719815-b0f6-4c62-bcb2-52310df6c7e8 level=3 pid=65418
+** [Honeybadger] Initializing Honeybadger Error Tracker for Ruby. Ship it! version=3.1.1 framework=rails level=1 pid=65478
+** [Honeybadger] Entering development mode: data will not be reported. level=2 pid=65478
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", :environment]]
+  [1m[35m (205.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "patchcord_development"[0m
+  [1m[35m (183.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "patchcord_test"[0m
+** [Honeybadger] Initializing Honeybadger Error Tracker for Ruby. Ship it! version=3.1.1 framework=rails level=1 pid=65539
+** [Honeybadger] Entering development mode: data will not be reported. level=2 pid=65539
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(430504088990298855);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20170415125852)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" serial primary key, "username" character varying, "email" character varying, "first_name" character varying, "last_name" character varying, "password" character varying, "city" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170415125852"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateInstruments (20170415125914)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "instruments" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170415125914"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateLinks (20170415130020)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "links" ("id" serial primary key, "url" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170415130020"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateGenres (20170415130029)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE TABLE "genres" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170415130029"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-04-15 13:17:13 UTC], ["updated_at", 2017-04-15 13:17:13 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(430504088990298855)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+** [Honeybadger] Initializing Honeybadger Error Tracker for Ruby. Ship it! version=3.1.1 framework=rails level=1 pid=65575
+** [Honeybadger] Entering development mode: data will not be reported. level=2 pid=65575
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "first_name", "last_name", "password", "city", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["username", "lilliana_goodwin"], ["email", "kayley@strosinmohr.com"], ["first_name", "Millie"], ["last_name", "Thompson"], ["password", "PwH7XhU0Oh"], ["city", "New York"], ["created_at", 2017-04-15 13:17:17 UTC], ["updated_at", 2017-04-15 13:17:17 UTC]]
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "first_name", "last_name", "password", "city", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["username", "jarvis_reichert"], ["email", "caterina@ziemebartell.co"], ["first_name", "Graham"], ["last_name", "Bradtke"], ["password", "F4J390K9Z9Cs"], ["city", "New York"], ["created_at", 2017-04-15 13:17:17 UTC], ["updated_at", 2017-04-15 13:17:17 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "first_name", "last_name", "password", "city", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["username", "haleigh"], ["email", "neha_johnson@gottliebhowell.info"], ["first_name", "Misty"], ["last_name", "Dare"], ["password", "KvF9G8DvQx"], ["city", "New York"], ["created_at", 2017-04-15 13:17:17 UTC], ["updated_at", 2017-04-15 13:17:17 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "first_name", "last_name", "password", "city", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["username", "henry_oberbrunner"], ["email", "arnaldo@schamberger.io"], ["first_name", "Stephania"], ["last_name", "Gleichner"], ["password", "S7AnOpHg0u"], ["city", "New York"], ["created_at", 2017-04-15 13:17:17 UTC], ["updated_at", 2017-04-15 13:17:17 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "first_name", "last_name", "password", "city", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["username", "ludwig_mckenzie"], ["email", "modesto@corwin.name"], ["first_name", "Annabell"], ["last_name", "Fritsch"], ["password", "Q534R0CiMhEv8sQx"], ["city", "New York"], ["created_at", 2017-04-15 13:17:17 UTC], ["updated_at", 2017-04-15 13:17:17 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "first_name", "last_name", "password", "city", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["username", "noemi"], ["email", "lillie@walter.info"], ["first_name", "Braden"], ["last_name", "Koelpin"], ["password", "UaMiXfHnRoNgZs97"], ["city", "New York"], ["created_at", 2017-04-15 13:17:17 UTC], ["updated_at", 2017-04-15 13:17:17 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "first_name", "last_name", "password", "city", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["username", "margot"], ["email", "mohammad@abernathy.io"], ["first_name", "Rickey"], ["last_name", "Rice"], ["password", "S4FsEi0mTmRlEoQ"], ["city", "New York"], ["created_at", 2017-04-15 13:17:17 UTC], ["updated_at", 2017-04-15 13:17:17 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "first_name", "last_name", "password", "city", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["username", "kamron"], ["email", "zelda@macgyvergulgowski.net"], ["first_name", "Magali"], ["last_name", "Willms"], ["password", "9aPqB0BxZuF32"], ["city", "New York"], ["created_at", 2017-04-15 13:17:17 UTC], ["updated_at", 2017-04-15 13:17:17 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "first_name", "last_name", "password", "city", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["username", "alberta"], ["email", "antonia_lowe@kshlerin.info"], ["first_name", "Violette"], ["last_name", "Nienow"], ["password", "21Zi0k025l"], ["city", "New York"], ["created_at", 2017-04-15 13:17:17 UTC], ["updated_at", 2017-04-15 13:17:17 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("username", "email", "first_name", "last_name", "password", "city", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["username", "joy.breitenberg"], ["email", "koby_davis@brakuskihn.net"], ["first_name", "Milford"], ["last_name", "Schinner"], ["password", "KnOn78CbKkMp"], ["city", "New York"], ["created_at", 2017-04-15 13:17:17 UTC], ["updated_at", 2017-04-15 13:17:17 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "instruments" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Bass Guitar"], ["created_at", 2017-04-15 13:17:17 UTC], ["updated_at", 2017-04-15 13:17:17 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "instruments" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Piano"], ["created_at", 2017-04-15 13:17:17 UTC], ["updated_at", 2017-04-15 13:17:17 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "instruments" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Harmonica"], ["created_at", 2017-04-15 13:17:17 UTC], ["updated_at", 2017-04-15 13:17:17 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "instruments" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Xylophone"], ["created_at", 2017-04-15 13:17:17 UTC], ["updated_at", 2017-04-15 13:17:17 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "instruments" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Organ"], ["created_at", 2017-04-15 13:17:17 UTC], ["updated_at", 2017-04-15 13:17:17 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "instruments" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Violin"], ["created_at", 2017-04-15 13:17:17 UTC], ["updated_at", 2017-04-15 13:17:17 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "instruments" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Flute"], ["created_at", 2017-04-15 13:17:17 UTC], ["updated_at", 2017-04-15 13:17:17 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "instruments" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Organ"], ["created_at", 2017-04-15 13:17:17 UTC], ["updated_at", 2017-04-15 13:17:17 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "instruments" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Organ"], ["created_at", 2017-04-15 13:17:17 UTC], ["updated_at", 2017-04-15 13:17:17 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "instruments" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Harmonica"], ["created_at", 2017-04-15 13:17:17 UTC], ["updated_at", 2017-04-15 13:17:17 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Rock"], ["created_at", 2017-04-15 13:17:17 UTC], ["updated_at", 2017-04-15 13:17:17 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Pop"], ["created_at", 2017-04-15 13:17:17 UTC], ["updated_at", 2017-04-15 13:17:17 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Soul"], ["created_at", 2017-04-15 13:17:17 UTC], ["updated_at", 2017-04-15 13:17:17 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Jazz"], ["created_at", 2017-04-15 13:17:17 UTC], ["updated_at", 2017-04-15 13:17:17 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Hip Hop"], ["created_at", 2017-04-15 13:17:17 UTC], ["updated_at", 2017-04-15 13:17:17 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
