@@ -1,3 +1,7 @@
-10.times do 
-  User.create({ username: Faker::Name.first_name, password_digest: "password", user_first_name: Faker::Name.first_name, user_last_name: Faker::Name.last_name, user_age: 27, user_role: "musician", user_city: Faker::Address.city, user_zip_code: Faker::Address.zip })
-end 
+# This file should contain all the record creation needed to seed the database with its default values.
+# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
+#
+# Examples:
+#
+#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+#   Character.create(name: 'Luke', movie: movies.first)
