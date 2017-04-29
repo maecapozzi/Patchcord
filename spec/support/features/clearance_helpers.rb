@@ -47,6 +47,11 @@ module Features
       reset_password_for user.email
       user.reload
     end
+
+    def expect_page_to_display_profile_link
+      visit root_path
+      expect(page).to have_link("Profile")
+    end
   end
 end
 
