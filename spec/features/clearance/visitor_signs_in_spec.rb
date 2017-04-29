@@ -31,6 +31,12 @@ RSpec.feature "Visitor signs in" do
     expect_user_to_be_signed_out
   end
 
+  scenario "when signed in" do
+    sign_in
+
+    expect_page_to_display_profile_link
+  end
+
   private
 
   def create_user(email, password)

@@ -6,4 +6,9 @@ class UsersController < ApplicationController
       @users = User.where(role: "booker");
     end
   end
+
+
+  def show
+
+  end
 end

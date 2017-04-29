@@ -14,10 +14,14 @@
     users = User.create([{email: Faker::Internet.email, first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, password: Faker::Internet.password, city: "New York", role: "booker" }])
   end
 
-
   10.times do
     instruments = Instrument.create([{ name: Faker::Music.instrument }])
   end
 
+  users = User.all
+
+  users.each do |user|
+    Profile.create({first_name: user.first_name, last_name: user.last_name, summary: "", user_id: user.id })
+  end
 
   genres = Genre.create([{ name: "Rock" }, {name: "Pop"}, {name: "Soul"}, {name: "Jazz"}, {name: "Hip Hop"}])
