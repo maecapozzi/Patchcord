@@ -1,7 +1,9 @@
 <h1>Patchcord</h1>
 
+<% if signed_in? %>
 <%= form_tag("users", method: "get") do %>
   <p>I am a <%= select_tag(:search, options_for_select([['Musician', 1], ['Booker', 2]], selected: :search)) %></p>
   <p>Looking for a <%= select_tag(:searching_for, options_for_select([['Musician', 1], ['Booker', 2]], selected: :searching_for)) %></p>
   <%= submit_tag "Search" %>
+<% end %>
 <% end %>

@@ -24,7 +24,7 @@ class UsersController < Clearance::UsersController
   end
 
   def show
-    @user = current_user
+    @user = User.find(params[:id])
   end
 
   def edit
@@ -42,10 +42,14 @@ class UsersController < Clearance::UsersController
     end
   end
 
+  def destroy
+    User.delete(params[:id])
+  end
+
   def user_params
     params.require(:user).permit(:first_name, :last_name, :email, :password, :city, :role, :summary)
   end
-  
+
   def user_from_params
     first_name = user_params.delete(:first_name)
     last_name = user_params.delete(:last_name)

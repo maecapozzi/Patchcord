@@ -257,3 +257,17 @@ W, [2017-04-30T15:52:14.765456 #82042]  WARN -- : [SKYLIGHT] [1.2.0] Running Sky
 (To disable this message for all local apps, run `skylight disable_dev_warning`.)
 W, [2017-04-30T16:09:01.474682 #83346]  WARN -- : [SKYLIGHT] [1.2.0] Running Skylight in development mode. No data will be reported until you deploy your app.
 (To disable this message for all local apps, run `skylight disable_dev_warning`.)
+W, [2017-04-30T16:25:37.621533 #84520]  WARN -- : [SKYLIGHT] [1.2.0] Running Skylight in development mode. No data will be reported until you deploy your app.
+(To disable this message for all local apps, run `skylight disable_dev_warning`.)
+W, [2017-04-30T16:27:40.995085 #84670]  WARN -- : [SKYLIGHT] [1.2.0] Running Skylight in development mode. No data will be reported until you deploy your app.
+(To disable this message for all local apps, run `skylight disable_dev_warning`.)
+W, [2017-04-30T16:34:11.335462 #84911]  WARN -- : [SKYLIGHT] [1.2.0] Running Skylight in development mode. No data will be reported until you deploy your app.
+(To disable this message for all local apps, run `skylight disable_dev_warning`.)
+W, [2017-04-30T16:34:45.835208 #84995]  WARN -- : [SKYLIGHT] [1.2.0] Running Skylight in development mode. No data will be reported until you deploy your app.
+(To disable this message for all local apps, run `skylight disable_dev_warning`.)
+W, [2017-04-30T16:35:45.760483 #85056]  WARN -- : [SKYLIGHT] [1.2.0] Running Skylight in development mode. No data will be reported until you deploy your app.
+(To disable this message for all local apps, run `skylight disable_dev_warning`.)
+W, [2017-04-30T16:37:59.962266 #85213]  WARN -- : [SKYLIGHT] [1.2.0] Running Skylight in development mode. No data will be reported until you deploy your app.
+(To disable this message for all local apps, run `skylight disable_dev_warning`.)
+W, [2017-04-30T16:49:49.220682 #85528]  WARN -- : [SKYLIGHT] [1.2.0] Running Skylight in development mode. No data will be reported until you deploy your app.
+(To disable this message for all local apps, run `skylight disable_dev_warning`.)

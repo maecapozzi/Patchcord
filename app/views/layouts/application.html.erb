@@ -20,7 +20,7 @@
   <%= render "css_overrides" %>
 
   <% if signed_in? %>
-    Signed in as: <%= current_user.first_name %>
+    Welcome <%= current_user.first_name %>!
     <%= link_to 'Profile', user_path(current_user.id) %>
     <%= button_to 'Sign out', sign_out_path, method: :delete %>
   <% else %>
