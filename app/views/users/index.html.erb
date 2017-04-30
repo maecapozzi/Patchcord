@@ -1,4 +1,4 @@
 <% @users.each do |user| %>
   <%= user.first_name %>
-  <%= user.role %><br>
+  <%= link_to 'Profile', user_path(current_user.id) %>
 <% end %>
