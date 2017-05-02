@@ -1,9 +1,9 @@
 class UsersController < Clearance::UsersController
   def index
     if params[:searching_for] == "1"
-      @users = User.where(role: "musician");
+      @users = User.where(role: "musician")
     else
-      @users = User.where(role: "booker");
+      @users = User.where(role: "booker")
     end
   end
 
