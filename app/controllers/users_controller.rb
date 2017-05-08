@@ -25,6 +25,10 @@ class UsersController < Clearance::UsersController
 
   def show
     @user = User.find(params[:id])
+    user_genres = UserGenre.where(user_id: @user.id)
+    user_genres.each do |genre|
+      @genres = Genre.where(id: genre.genre_id)
+    end
   end
 
   def edit

@@ -2,6 +2,10 @@
 <%= @user.last_name %><br>
 <%= @user.email %><br>
 <%= @user.role %><br>
+<% @genres.each do |genre| %>
+  <%= genre.name %>
+<% end %>
+
 
 <br>
 <% if @user == current_user %>

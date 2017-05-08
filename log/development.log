@@ -13728,3 +13728,509 @@ Migrating to CreateUserGenres (20170508171756)
 ** [Honeybadger] Entering development mode: data will not be reported. level=2 pid=3839
   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   [1m[36mGenre Load (0.7ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "user_genres" ON "genres"."id" = "user_genres"."genre_id" WHERE "user_genres"."user_id" = $1[0m  [["user_id", 1]]
+** [Honeybadger] Initializing Honeybadger Error Tracker for Ruby. Ship it! version=3.1.1 framework=rails level=1 pid=3941
+** [Honeybadger] Entering development mode: data will not be reported. level=2 pid=3941
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGenre Load (0.3ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUserGenre Load (0.3ms)[0m  [1m[34mSELECT  "user_genres".* FROM "user_genres" WHERE "user_genres"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "user_genres" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", 2017-05-08 17:23:56 UTC], ["updated_at", 2017-05-08 17:23:56 UTC]]
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "user_genres" ("user_id", "genre_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["genre_id", 1], ["created_at", 2017-05-08 17:24:13 UTC], ["updated_at", 2017-05-08 17:24:13 UTC]]
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUserGenre Load (0.4ms)[0m  [1m[34mSELECT  "user_genres".* FROM "user_genres" WHERE "user_genres"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUserGenre Load (0.3ms)[0m  [1m[34mSELECT  "user_genres".* FROM "user_genres" WHERE "user_genres"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUserGenre Load (0.3ms)[0m  [1m[34mSELECT "user_genres".* FROM "user_genres" WHERE "user_genres"."user_id" = $1[0m  [["user_id", 1]]
+  [1m[36mUserGenre Load (0.4ms)[0m  [1m[34mSELECT  "user_genres".* FROM "user_genres" WHERE "user_genres"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mGenre Load (0.4ms)[0m  [1m[34mSELECT  "genres".* FROM "genres" WHERE "genres"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+** [Honeybadger] Initializing Honeybadger Error Tracker for Ruby. Ship it! version=3.1.1 framework=rails level=1 pid=4025
+** [Honeybadger] Entering development mode: data will not be reported. level=2 pid=4025
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+** [Honeybadger] Unable to send error report: API key is missing. id=2103563d-d174-4d97-9f6c-634d60e14fa3 level=3 pid=4025
+** [Honeybadger] Initializing Honeybadger Error Tracker for Ruby. Ship it! version=3.1.1 framework=rails level=1 pid=4075
+** [Honeybadger] Entering development mode: data will not be reported. level=2 pid=4075
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+** [Honeybadger] Unable to send error report: API key is missing. id=9eaac1a7-f777-43ee-9d31-11962a6d6301 level=3 pid=4075
+** [Honeybadger] Initializing Honeybadger Error Tracker for Ruby. Ship it! version=3.1.1 framework=rails level=1 pid=4126
+** [Honeybadger] Entering development mode: data will not be reported. level=2 pid=4126
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "nia@brownnikolaus.info"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "city", "role", "created_at", "updated_at", "encrypted_password", "remember_token") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "nia@brownnikolaus.info"], ["first_name", "Dedrick"], ["last_name", "Armstrong"], ["city", "New York"], ["role", "musician"], ["created_at", 2017-05-08 17:27:29 UTC], ["updated_at", 2017-05-08 17:27:29 UTC], ["encrypted_password", "$2a$10$T7XEs1Pq0qB8yzIdd7lNeussfpKmdDjb17KKKA6bHukipkbZfyBDG"], ["remember_token", "0e2ba0fa33e4596403538328eaf7d97bf3af7a0b"]]
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "crawford@schimmel.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "city", "role", "created_at", "updated_at", "encrypted_password", "remember_token") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "crawford@schimmel.com"], ["first_name", "Skyla"], ["last_name", "Stanton"], ["city", "New York"], ["role", "musician"], ["created_at", 2017-05-08 17:27:29 UTC], ["updated_at", 2017-05-08 17:27:29 UTC], ["encrypted_password", "$2a$10$g/YBZihRmUDHS3xzENBEau2oUeDAfKJFRp5M7SaxhdvWMEUybLcMy"], ["remember_token", "3c8b2b6e21f79e71af71eda27236027bdcb40603"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "nels_mraz@little.io"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "city", "role", "created_at", "updated_at", "encrypted_password", "remember_token") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "nels_mraz@little.io"], ["first_name", "Kyler"], ["last_name", "Considine"], ["city", "New York"], ["role", "musician"], ["created_at", 2017-05-08 17:27:29 UTC], ["updated_at", 2017-05-08 17:27:29 UTC], ["encrypted_password", "$2a$10$X6J7uHMCHxK5CYePuR9q4OxuKgjyFYwVAKrr7h6Or9Xq9KTQY7nRy"], ["remember_token", "4363e48e74d69d9f7639091b34b616f3201a6972"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "carol.braun@jastjakubowski.biz"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "city", "role", "created_at", "updated_at", "encrypted_password", "remember_token") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "carol.braun@jastjakubowski.biz"], ["first_name", "Adah"], ["last_name", "Haag"], ["city", "New York"], ["role", "musician"], ["created_at", 2017-05-08 17:27:29 UTC], ["updated_at", 2017-05-08 17:27:29 UTC], ["encrypted_password", "$2a$10$ZAf/J13BQpdanD1L0LZVTeWfiOJb6CcPou4582662K7HTUtKV2JhS"], ["remember_token", "f6231b9d650ef40335678a5ec0f5ddf52cd206e3"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "karelle.windler@kautzer.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "city", "role", "created_at", "updated_at", "encrypted_password", "remember_token") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "karelle.windler@kautzer.org"], ["first_name", "Alayna"], ["last_name", "Schuster"], ["city", "New York"], ["role", "musician"], ["created_at", 2017-05-08 17:27:29 UTC], ["updated_at", 2017-05-08 17:27:29 UTC], ["encrypted_password", "$2a$10$sUwspC4raaNlx8lPnysFDOWeL75ivNJ1xuIwnP2ryNrJzFqt5HHPy"], ["remember_token", "e492b651aeae8b62063b909c11c35135944a5262"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "odie@barrowchulist.io"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "city", "role", "created_at", "updated_at", "encrypted_password", "remember_token") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "odie@barrowchulist.io"], ["first_name", "Bennie"], ["last_name", "Reichert"], ["city", "New York"], ["role", "musician"], ["created_at", 2017-05-08 17:27:30 UTC], ["updated_at", 2017-05-08 17:27:30 UTC], ["encrypted_password", "$2a$10$Bm5ADu7ZhIpvryQdXOGo7u0XnL0nulqQCTjZtlXkFORN97G8mj462"], ["remember_token", "2abc047127ca86881e97d93d2f9070b22011be04"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "loy_medhurst@osinski.biz"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "city", "role", "created_at", "updated_at", "encrypted_password", "remember_token") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "loy_medhurst@osinski.biz"], ["first_name", "Sheldon"], ["last_name", "Ryan"], ["city", "New York"], ["role", "musician"], ["created_at", 2017-05-08 17:27:30 UTC], ["updated_at", 2017-05-08 17:27:30 UTC], ["encrypted_password", "$2a$10$cXwITlVR2iVcvKNvcvwmQuizm4haBfMYJXLiaGCdgMZrfUStzXT5m"], ["remember_token", "83d4c0bddc5057e863e4b55c07652b18bf0acea3"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "annamarie@langosh.name"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "city", "role", "created_at", "updated_at", "encrypted_password", "remember_token") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "annamarie@langosh.name"], ["first_name", "Laurel"], ["last_name", "Renner"], ["city", "New York"], ["role", "musician"], ["created_at", 2017-05-08 17:27:30 UTC], ["updated_at", 2017-05-08 17:27:30 UTC], ["encrypted_password", "$2a$10$wZ4IjuI3pKjZGj4lh1clRuw1S08KQReKk2LKTLXIn1RdQLglBzXi2"], ["remember_token", "54cd1af2dfd57a2aa78ba7f2520290d5489cd8f9"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "abe@pricebotsford.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "city", "role", "created_at", "updated_at", "encrypted_password", "remember_token") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "abe@pricebotsford.com"], ["first_name", "Gracie"], ["last_name", "Dach"], ["city", "New York"], ["role", "musician"], ["created_at", 2017-05-08 17:27:30 UTC], ["updated_at", 2017-05-08 17:27:30 UTC], ["encrypted_password", "$2a$10$fGVZtcbolmtQ/4a465VVH.BITqddIstA/iQ2Rg.yVRxJGwoqxNfaK"], ["remember_token", "71ccf03e2431d81bee4e4964a3a14d42b66c6be1"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "giles@nitzsche.info"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "city", "role", "created_at", "updated_at", "encrypted_password", "remember_token") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "giles@nitzsche.info"], ["first_name", "Everardo"], ["last_name", "Shields"], ["city", "New York"], ["role", "musician"], ["created_at", 2017-05-08 17:27:30 UTC], ["updated_at", 2017-05-08 17:27:30 UTC], ["encrypted_password", "$2a$10$S6TuqcOmc6WmNpNEwObLO.y2niX2TMNEOJ81LWLXK3d6nyvMvrFMS"], ["remember_token", "a339c5145defab51e24ea67423c1d6c39cae624b"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "timmy@effertzpacocha.io"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "city", "role", "created_at", "updated_at", "encrypted_password", "remember_token") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "timmy@effertzpacocha.io"], ["first_name", "Zane"], ["last_name", "Kihn"], ["city", "New York"], ["role", "booker"], ["created_at", 2017-05-08 17:27:30 UTC], ["updated_at", 2017-05-08 17:27:30 UTC], ["encrypted_password", "$2a$10$YAhjY5/xWpJTv.L.dWPCUO31ueeqXuc7AO34B//efnGs57AkdTTFm"], ["remember_token", "fafb5469cc17710e10978a0f2fe95d4a1efd1bd0"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "gia@hermann.name"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "city", "role", "created_at", "updated_at", "encrypted_password", "remember_token") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "gia@hermann.name"], ["first_name", "Clark"], ["last_name", "Jaskolski"], ["city", "New York"], ["role", "booker"], ["created_at", 2017-05-08 17:27:30 UTC], ["updated_at", 2017-05-08 17:27:30 UTC], ["encrypted_password", "$2a$10$axMu0hKxMSVGB2QTnvj8m.iAAoNUIteu.13K9t5WnsBEFMBoaHd9e"], ["remember_token", "e7fe929e647b8fc58200c46356f76d1b8cfbb717"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "brandi@beierlowe.info"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "city", "role", "created_at", "updated_at", "encrypted_password", "remember_token") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "brandi@beierlowe.info"], ["first_name", "Sophia"], ["last_name", "Wolff"], ["city", "New York"], ["role", "booker"], ["created_at", 2017-05-08 17:27:30 UTC], ["updated_at", 2017-05-08 17:27:30 UTC], ["encrypted_password", "$2a$10$QxwdxRm/lmtASBTk8aFl0.PlQjCsPSa1SDRDTVL5PgOr4EB.fbnNq"], ["remember_token", "beac51004e39cbc5b19cafe05dc8cc14bc63192c"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "golda@ernser.net"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "city", "role", "created_at", "updated_at", "encrypted_password", "remember_token") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "golda@ernser.net"], ["first_name", "Amina"], ["last_name", "Walsh"], ["city", "New York"], ["role", "booker"], ["created_at", 2017-05-08 17:27:30 UTC], ["updated_at", 2017-05-08 17:27:30 UTC], ["encrypted_password", "$2a$10$eSuWCL7hK/O68MPdgc4PyefkuqXyFmxazFr5s2m1stl455okpqKEC"], ["remember_token", "916a23841b8110c2056c3c805a7d0609436501f4"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "mia@dubuque.net"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "city", "role", "created_at", "updated_at", "encrypted_password", "remember_token") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "mia@dubuque.net"], ["first_name", "Jayne"], ["last_name", "Bins"], ["city", "New York"], ["role", "booker"], ["created_at", 2017-05-08 17:27:30 UTC], ["updated_at", 2017-05-08 17:27:30 UTC], ["encrypted_password", "$2a$10$RwZyxU5R574XQgcv.qpUB.Et.r5HYiVm4zqQOotHdrliOfeqR9Twq"], ["remember_token", "eb01bed7e271d38c6478a46cdb574f9134e02a00"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "gudrun.toy@ruecker.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "city", "role", "created_at", "updated_at", "encrypted_password", "remember_token") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "gudrun.toy@ruecker.org"], ["first_name", "Stefanie"], ["last_name", "Lehner"], ["city", "New York"], ["role", "booker"], ["created_at", 2017-05-08 17:27:30 UTC], ["updated_at", 2017-05-08 17:27:30 UTC], ["encrypted_password", "$2a$10$zDdozlYX6CynKHTG8PXfA.jV9NuAWs25aOiTntCm7ZSra2EUAphhG"], ["remember_token", "110b4e8fdab82e4bff87f6a0848254c6bd40a81b"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "jena.hirthe@funk.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "city", "role", "created_at", "updated_at", "encrypted_password", "remember_token") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "jena.hirthe@funk.org"], ["first_name", "Ressie"], ["last_name", "Hermiston"], ["city", "New York"], ["role", "booker"], ["created_at", 2017-05-08 17:27:30 UTC], ["updated_at", 2017-05-08 17:27:30 UTC], ["encrypted_password", "$2a$10$Ye.RIARZ9NZSTSKacOBjWunjYi7QZuNZoRn5dn.QXWEsyNjad14fK"], ["remember_token", "7b1f5c792b3470ad1dda09caf95c37d587e2219b"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "arlie_macgyver@jerde.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "city", "role", "created_at", "updated_at", "encrypted_password", "remember_token") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "arlie_macgyver@jerde.com"], ["first_name", "Brycen"], ["last_name", "Lakin"], ["city", "New York"], ["role", "booker"], ["created_at", 2017-05-08 17:27:30 UTC], ["updated_at", 2017-05-08 17:27:30 UTC], ["encrypted_password", "$2a$10$CskpK7THyPJ3eRNnX4biKeegnZ4s9s56CRYNHpvCJiMQfhjBsB/QS"], ["remember_token", "1696d961baa85c5e0f722e7ee4961dd47302987f"]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tiana@stokesvon.co"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "city", "role", "created_at", "updated_at", "encrypted_password", "remember_token") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "tiana@stokesvon.co"], ["first_name", "Jennie"], ["last_name", "Reichel"], ["city", "New York"], ["role", "booker"], ["created_at", 2017-05-08 17:27:30 UTC], ["updated_at", 2017-05-08 17:27:30 UTC], ["encrypted_password", "$2a$10$5IviUqH/19T4lcJM1mNbFeyS/WQyk0zkRlqeglu6eXabj1R9HmWzO"], ["remember_token", "428f77403fae0415015648f3b3f4c9f11db484ce"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "citlalli.jakubowski@hudsonlind.org"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "city", "role", "created_at", "updated_at", "encrypted_password", "remember_token") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["email", "citlalli.jakubowski@hudsonlind.org"], ["first_name", "Ellie"], ["last_name", "Beahan"], ["city", "New York"], ["role", "booker"], ["created_at", 2017-05-08 17:27:30 UTC], ["updated_at", 2017-05-08 17:27:30 UTC], ["encrypted_password", "$2a$10$WwE6.XSdWLa1dkjkHHOl3uvmdId/UoS8lo5NTmTgWFgC0xTSe451y"], ["remember_token", "a653384d1b00ea8399015e1af6499b0c6d8330d5"]]
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "instruments" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Harmonica"], ["created_at", 2017-05-08 17:27:31 UTC], ["updated_at", 2017-05-08 17:27:31 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "instruments" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Xylophone"], ["created_at", 2017-05-08 17:27:31 UTC], ["updated_at", 2017-05-08 17:27:31 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "instruments" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Flute"], ["created_at", 2017-05-08 17:27:31 UTC], ["updated_at", 2017-05-08 17:27:31 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "instruments" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Clarinet"], ["created_at", 2017-05-08 17:27:31 UTC], ["updated_at", 2017-05-08 17:27:31 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "instruments" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Harp"], ["created_at", 2017-05-08 17:27:31 UTC], ["updated_at", 2017-05-08 17:27:31 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "instruments" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Violin"], ["created_at", 2017-05-08 17:27:31 UTC], ["updated_at", 2017-05-08 17:27:31 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "instruments" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Acoustic Guitar"], ["created_at", 2017-05-08 17:27:31 UTC], ["updated_at", 2017-05-08 17:27:31 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "instruments" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Flute"], ["created_at", 2017-05-08 17:27:31 UTC], ["updated_at", 2017-05-08 17:27:31 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "instruments" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Trumpet"], ["created_at", 2017-05-08 17:27:31 UTC], ["updated_at", 2017-05-08 17:27:31 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "instruments" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Trumpet"], ["created_at", 2017-05-08 17:27:31 UTC], ["updated_at", 2017-05-08 17:27:31 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Rock"], ["created_at", 2017-05-08 17:27:31 UTC], ["updated_at", 2017-05-08 17:27:31 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Pop"], ["created_at", 2017-05-08 17:27:31 UTC], ["updated_at", 2017-05-08 17:27:31 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Soul"], ["created_at", 2017-05-08 17:27:31 UTC], ["updated_at", 2017-05-08 17:27:31 UTC]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Jazz"], ["created_at", 2017-05-08 17:27:31 UTC], ["updated_at", 2017-05-08 17:27:31 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Hip Hop"], ["created_at", 2017-05-08 17:27:31 UTC], ["updated_at", 2017-05-08 17:27:31 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "user_genres" ("user_id", "genre_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["genre_id", 1], ["created_at", 2017-05-08 17:27:31 UTC], ["updated_at", 2017-05-08 17:27:31 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "user_genres" ("user_id", "genre_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["genre_id", 2], ["created_at", 2017-05-08 17:27:31 UTC], ["updated_at", 2017-05-08 17:27:31 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "user_genres" ("user_id", "genre_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["genre_id", 3], ["created_at", 2017-05-08 17:27:31 UTC], ["updated_at", 2017-05-08 17:27:31 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "user_genres" ("user_id", "genre_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 2], ["genre_id", 1], ["created_at", 2017-05-08 17:27:31 UTC], ["updated_at", 2017-05-08 17:27:31 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+** [Honeybadger] Initializing Honeybadger Error Tracker for Ruby. Ship it! version=3.1.1 framework=rails level=1 pid=4214
+** [Honeybadger] Entering development mode: data will not be reported. level=2 pid=4214
+Started GET "/" for ::1 at 2017-05-08 13:29:51 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendering layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "3774792b249360c2255bd580a8db9f90ea32d8a1"], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (23.1ms)
+  Rendered application/_flashes.html.erb (0.4ms)
+  Rendered application/_analytics.html.erb (0.6ms)
+  Rendered application/_javascript.html.erb (13.7ms)
+  Rendered application/_css_overrides.html.erb (0.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "3774792b249360c2255bd580a8db9f90ea32d8a1"], ["LIMIT", 1]]
+  Rendered layouts/application.html.erb (519.9ms)
+Completed 200 OK in 527ms (Views: 522.8ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/sign_in" for ::1 at 2017-05-08 13:29:54 -0400
+Processing by Clearance::SessionsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "3774792b249360c2255bd580a8db9f90ea32d8a1"], ["LIMIT", 1]]
+  Rendering layouts/application.html.erb
+  Rendering /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/clearance-1.15.1/app/views/sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (8.1ms)
+  Rendered /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/clearance-1.15.1/app/views/sessions/new.html.erb within layouts/application (9.8ms)
+  Rendered application/_flashes.html.erb (0.5ms)
+  Rendered application/_analytics.html.erb (0.3ms)
+  Rendered application/_javascript.html.erb (11.0ms)
+  Rendered application/_css_overrides.html.erb (0.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "3774792b249360c2255bd580a8db9f90ea32d8a1"], ["LIMIT", 1]]
+  Rendered layouts/application.html.erb (43.3ms)
+Completed 200 OK in 54ms (Views: 51.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/sign_up" for ::1 at 2017-05-08 13:29:58 -0400
+Processing by Clearance::UsersController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "3774792b249360c2255bd580a8db9f90ea32d8a1"], ["LIMIT", 1]]
+  Rendering layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (0.9ms)
+  Rendered users/new.html.erb within layouts/application (3.8ms)
+  Rendered application/_flashes.html.erb (0.4ms)
+  Rendered application/_analytics.html.erb (0.4ms)
+  Rendered application/_javascript.html.erb (28.9ms)
+  Rendered application/_css_overrides.html.erb (0.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "3774792b249360c2255bd580a8db9f90ea32d8a1"], ["LIMIT", 1]]
+  Rendered layouts/application.html.erb (52.9ms)
+Completed 200 OK in 76ms (Views: 65.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for ::1 at 2017-05-08 13:30:06 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "user"=>{"first_name"=>"Mae", "last_name"=>"Capozzi", "email"=>"maecapozzi@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "3774792b249360c2255bd580a8db9f90ea32d8a1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "maecapozzi@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "created_at", "updated_at", "encrypted_password", "remember_token") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "maecapozzi@gmail.com"], ["first_name", "Mae"], ["last_name", "Capozzi"], ["created_at", 2017-05-08 17:30:06 UTC], ["updated_at", 2017-05-08 17:30:06 UTC], ["encrypted_password", "$2a$10$s9yVTqqkqbffrF4hnKWC7uSf1BQ7m2cn5hi9sxIiNbnCmhNEkjDGW"], ["remember_token", "308d358d46235722d60d6999418e023420883d97"]]
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 147ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/" for ::1 at 2017-05-08 13:30:06 -0400
+Processing by HomeController#index as HTML
+  Rendering layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "308d358d46235722d60d6999418e023420883d97"], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (2.6ms)
+  Rendered application/_flashes.html.erb (0.4ms)
+  Rendered application/_analytics.html.erb (0.4ms)
+  Rendered application/_javascript.html.erb (9.1ms)
+  Rendered application/_css_overrides.html.erb (0.2ms)
+  Rendered layouts/application.html.erb (25.2ms)
+Completed 200 OK in 30ms (Views: 28.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/41" for ::1 at 2017-05-08 13:30:10 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUserGenre Load (0.4ms)[0m  [1m[34mSELECT "user_genres".* FROM "user_genres" WHERE "user_genres"."user_id" = $1[0m  [["user_id", 41]]
+  [1m[36mUserGenre Load (0.3ms)[0m  [1m[34mSELECT "user_genres".* FROM "user_genres"[0m
+Started GET "/users/41" for ::1 at 2017-05-08 13:31:09 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "308d358d46235722d60d6999418e023420883d97"], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (8.3ms)
+  Rendered application/_flashes.html.erb (0.4ms)
+  Rendered application/_analytics.html.erb (0.6ms)
+  Rendered application/_javascript.html.erb (19.9ms)
+  Rendered application/_css_overrides.html.erb (0.4ms)
+  Rendered layouts/application.html.erb (556.4ms)
+Completed 200 OK in 18206ms (Views: 566.8ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/users/41" for ::1 at 2017-05-08 13:31:32 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUserGenre Load (0.3ms)[0m  [1m[34mSELECT  "user_genres".* FROM "user_genres" WHERE "user_genres"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "308d358d46235722d60d6999418e023420883d97"], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (2.6ms)
+  Rendered application/_flashes.html.erb (0.4ms)
+  Rendered application/_analytics.html.erb (0.3ms)
+  Rendered application/_javascript.html.erb (11.3ms)
+  Rendered application/_css_overrides.html.erb (0.2ms)
+  Rendered layouts/application.html.erb (40.2ms)
+Completed 200 OK in 20440ms (Views: 47.6ms | ActiveRecord: 2.3ms)
+
+
+** [Honeybadger] Initializing Honeybadger Error Tracker for Ruby. Ship it! version=3.1.1 framework=rails level=1 pid=4347
+** [Honeybadger] Entering development mode: data will not be reported. level=2 pid=4347
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."first_name" = $1[0m  [["first_name", "Mae"]]
+  [1m[36mUserGenre Load (0.5ms)[0m  [1m[34mSELECT "user_genres".* FROM "user_genres"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "user_genres" ("user_id", "genre_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 41], ["genre_id", 1], ["created_at", 2017-05-08 17:33:17 UTC], ["updated_at", 2017-05-08 17:33:17 UTC]]
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUserGenre Load (0.3ms)[0m  [1m[34mSELECT  "user_genres".* FROM "user_genres" WHERE "user_genres"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "user_genres" ("user_id", "genre_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["genre_id", 1], ["created_at", 2017-05-08 17:34:34 UTC], ["updated_at", 2017-05-08 17:34:34 UTC]]
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+** [Honeybadger] Initializing Honeybadger Error Tracker for Ruby. Ship it! version=3.1.1 framework=rails level=1 pid=4428
+** [Honeybadger] Entering development mode: data will not be reported. level=2 pid=4428
+Started GET "/users/41" for ::1 at 2017-05-08 13:35:24 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUserGenre Load (0.4ms)[0m  [1m[34mSELECT "user_genres".* FROM "user_genres" WHERE "user_genres"."user_id" = $1[0m  [["user_id", 41]]
+Started GET "/users/41" for ::1 at 2017-05-08 13:35:59 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "308d358d46235722d60d6999418e023420883d97"], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (9.6ms)
+  Rendered application/_flashes.html.erb (0.5ms)
+  Rendered application/_analytics.html.erb (0.6ms)
+  Rendered application/_javascript.html.erb (20.3ms)
+  Rendered application/_css_overrides.html.erb (0.4ms)
+  Rendered layouts/application.html.erb (560.5ms)
+Completed 200 OK in 629ms (Views: 572.9ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/users/41" for ::1 at 2017-05-08 13:36:36 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUserGenre Load (0.4ms)[0m  [1m[34mSELECT "user_genres".* FROM "user_genres" WHERE "user_genres"."user_id" = $1[0m  [["user_id", 41]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "308d358d46235722d60d6999418e023420883d97"], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (7.2ms)
+  Rendered application/_flashes.html.erb (0.4ms)
+  Rendered application/_analytics.html.erb (0.4ms)
+  Rendered application/_javascript.html.erb (11.7ms)
+  Rendered application/_css_overrides.html.erb (0.3ms)
+  Rendered layouts/application.html.erb (44.7ms)
+Completed 200 OK in 54ms (Views: 49.2ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/users/41" for ::1 at 2017-05-08 13:36:42 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  Rendering layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUserGenre Load (0.3ms)[0m  [1m[34mSELECT "user_genres".* FROM "user_genres" WHERE "user_genres"."user_id" = $1[0m  [["user_id", 41]]
+  Rendered users/show.html.erb within layouts/application (14.2ms)
+  Rendered layouts/application.html.erb (21.0ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<UserGenre:0x007fbb3d266f10>):
+    3: <%= @user.email %><br>
+    4: <%= @user.role %><br>
+    5: <% @user_genres.each do |genre| %>
+    6:   <%= genre.name %>
+    7: <% end %>
+    8: 
+    9: 
+  
+app/views/users/show.html.erb:6:in `block in _app_views_users_show_html_erb___1826580404358028883_70221076167380'
+app/views/users/show.html.erb:5:in `_app_views_users_show_html_erb___1826580404358028883_70221076167380'
+  Rendering /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/layout.erb
+  Rendering /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (62.8ms)
+  Rendered /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/layout.erb (66.0ms)
+** [Honeybadger] Unable to send error report: API key is missing. id=264c2b85-38d5-4fcb-91fb-37ce6adfee72 level=3 pid=4466
+Started GET "/users/41" for ::1 at 2017-05-08 13:38:37 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+Started GET "/users/41" for ::1 at 2017-05-08 13:38:46 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+** [Honeybadger] Initializing Honeybadger Error Tracker for Ruby. Ship it! version=3.1.1 framework=rails level=1 pid=4736
+** [Honeybadger] Entering development mode: data will not be reported. level=2 pid=4736
+Started GET "/users/41" for ::1 at 2017-05-08 13:39:40 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUserGenre Load (0.4ms)[0m  [1m[34mSELECT "user_genres".* FROM "user_genres" WHERE "user_genres"."user_id" = $1[0m  [["user_id", 41]]
+Started GET "/users/41" for ::1 at 2017-05-08 13:40:38 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUserGenre Load (0.4ms)[0m  [1m[34mSELECT "user_genres".* FROM "user_genres" WHERE "user_genres"."user_id" = $1[0m  [["user_id", 41]]
+  Rendering layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "308d358d46235722d60d6999418e023420883d97"], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (10.7ms)
+  Rendered application/_flashes.html.erb (0.4ms)
+  Rendered application/_analytics.html.erb (0.6ms)
+  Rendered application/_javascript.html.erb (18.3ms)
+  Rendered application/_css_overrides.html.erb (0.4ms)
+  Rendered layouts/application.html.erb (528.5ms)
+Completed 200 OK in 39581ms (Views: 538.6ms | ActiveRecord: 8.2ms)
+
+
+** [Honeybadger] Initializing Honeybadger Error Tracker for Ruby. Ship it! version=3.1.1 framework=rails level=1 pid=4862
+** [Honeybadger] Entering development mode: data will not be reported. level=2 pid=4862
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUserGenre Load (0.3ms)[0m  [1m[34mSELECT "user_genres".* FROM "user_genres" WHERE "user_genres"."user_id" = $1[0m  [["user_id", 41]]
+** [Honeybadger] Initializing Honeybadger Error Tracker for Ruby. Ship it! version=3.1.1 framework=rails level=1 pid=4935
+** [Honeybadger] Entering development mode: data will not be reported. level=2 pid=4935
+Started GET "/" for ::1 at 2017-05-08 13:43:40 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendering layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "308d358d46235722d60d6999418e023420883d97"], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (55.3ms)
+  Rendered application/_flashes.html.erb (0.5ms)
+  Rendered application/_analytics.html.erb (0.4ms)
+  Rendered application/_javascript.html.erb (19.5ms)
+  Rendered application/_css_overrides.html.erb (0.3ms)
+  Rendered layouts/application.html.erb (594.3ms)
+Completed 200 OK in 604ms (Views: 596.2ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/users/41" for ::1 at 2017-05-08 13:43:43 -0400
+  
+SyntaxError (/Users/maecapozzi/Desktop/Patchcord/app/controllers/users_controller.rb:29: syntax error, unexpected '|', expecting '}'
+    user_genres.each do {|genre| puts genre.genre_id}
+                          ^
+/Users/maecapozzi/Desktop/Patchcord/app/controllers/users_controller.rb:29: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+es.each do {|genre| puts genre.genre_id}
+                              ^
+/Users/maecapozzi/Desktop/Patchcord/app/controllers/users_controller.rb:29: syntax error, unexpected '}', expecting keyword_end
+ {|genre| puts genre.genre_id}
+                              ^
+/Users/maecapozzi/Desktop/Patchcord/app/controllers/users_controller.rb:68: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/users_controller.rb:29: syntax error, unexpected '|', expecting '}'
+app/controllers/users_controller.rb:29: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+app/controllers/users_controller.rb:29: syntax error, unexpected '}', expecting keyword_end
+app/controllers/users_controller.rb:68: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/layout.erb
+  Rendering /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendering /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (55.4ms)
+  Rendered /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/layout.erb (57.6ms)
+** [Honeybadger] Unable to send error report: API key is missing. id=bb7a7afa-eb73-4cae-9bbc-930e3f02d3d3 level=3 pid=4974
+Started GET "/users/41" for ::1 at 2017-05-08 13:44:19 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  
+SyntaxError (/Users/maecapozzi/Desktop/Patchcord/app/controllers/users_controller.rb:68: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/users_controller.rb:68: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/layout.erb
+  Rendering /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.6ms)
+  Rendering /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendering /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.7ms)
+  Rendered /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (76.0ms)
+  Rendered /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/layout.erb (78.6ms)
+** [Honeybadger] Unable to send error report: API key is missing. id=5adec5e7-1db6-4d32-a510-63893c8705f1 level=3 pid=4973
+Started GET "/users/41" for ::1 at 2017-05-08 13:44:32 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUserGenre Load (0.3ms)[0m  [1m[34mSELECT "user_genres".* FROM "user_genres" WHERE "user_genres"."user_id" = $1[0m  [["user_id", 41]]
+  Rendering layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "308d358d46235722d60d6999418e023420883d97"], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (4.6ms)
+  Rendered application/_flashes.html.erb (0.5ms)
+  Rendered application/_analytics.html.erb (0.4ms)
+  Rendered application/_javascript.html.erb (21.6ms)
+  Rendered application/_css_overrides.html.erb (0.3ms)
+  Rendered layouts/application.html.erb (542.7ms)
+Completed 200 OK in 608ms (Views: 551.0ms | ActiveRecord: 7.1ms)
+
+
+Started GET "/users/41" for ::1 at 2017-05-08 13:46:10 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 41], ["LIMIT", 1]]
+  [1m[36mUserGenre Load (0.2ms)[0m  [1m[34mSELECT "user_genres".* FROM "user_genres" WHERE "user_genres"."user_id" = $1[0m  [["user_id", 41]]
+  Rendering layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGenre Load (0.3ms)[0m  [1m[34mSELECT "genres".* FROM "genres" WHERE "genres"."id" = $1[0m  [["id", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "308d358d46235722d60d6999418e023420883d97"], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (6.3ms)
+  Rendered application/_flashes.html.erb (0.4ms)
+  Rendered application/_analytics.html.erb (0.3ms)
+  Rendered application/_javascript.html.erb (10.8ms)
+  Rendered application/_css_overrides.html.erb (0.3ms)
+  Rendered layouts/application.html.erb (41.7ms)
+Completed 200 OK in 74ms (Views: 46.9ms | ActiveRecord: 6.7ms)
+
+
+** [Honeybadger] Unable to send error report: API key is missing. id=e9457d74-8139-4b59-862b-5a032f8796d2 level=3 pid=4974

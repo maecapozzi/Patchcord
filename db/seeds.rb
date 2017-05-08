@@ -19,3 +19,5 @@
   end
 
   genres = Genre.create([{ name: "Rock" }, {name: "Pop"}, {name: "Soul"}, {name: "Jazz"}, {name: "Hip Hop"}])
+
+  user_genres = UserGenre.create([{user_id: 1, genre_id: 1}, {user_id: 1, genre_id: 2}, {user_id: 1, genre_id: 3}, {user_id: 2, genre_id: 1}])
