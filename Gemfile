@@ -21,6 +21,7 @@ gem "suspenders"
 gem "title"
 gem "uglifier"
 gem "clearance"
+gem 'high_voltage', '~> 3.0.0'
 
 group :development do
   gem "listen"

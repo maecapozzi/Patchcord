@@ -1,15 +1,10 @@
 class UsersController < Clearance::UsersController
   def index
-    if params[:searching_for] == "1"
-      @users = User.where(role: "musician")
-    else
-      @users = User.where(role: "booker")
-    end
+    @users = User.filter(params[:searching_for])
   end
 
   def new
     @user = user_from_params
-    render template: "users/new"
   end
 
   def create
@@ -25,15 +20,11 @@ class UsersController < Clearance::UsersController
 
   def show
     @user = User.find(params[:id])
-    user_genres = UserGenre.where(user_id: @user.id)
-    user_genres.each do |genre|
-      @genres = Genre.where(id: genre.genre_id)
-    end
+    @genres = @user.genres
   end
 
   def edit
     @user = current_user
-    render template: "users/edit"
   end
 
   def update
@@ -49,6 +40,8 @@ class UsersController < Clearance::UsersController
   def destroy
     User.delete(params[:id])
   end
+
+  private
 
   def user_params
     params.require(:user).permit(:first_name, :last_name, :email, :password, :city, :role, :summary)

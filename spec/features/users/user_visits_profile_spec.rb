@@ -2,11 +2,8 @@ require "rails_helper"
 
 RSpec.feature "User visits profile" do
   scenario "by navigating to the page" do
-    password = "password"
-    email =  Faker::Internet.email
-    user = FactoryGirl.create(:user, email: email, password: password)
-    sign_in_with user.email, password
-    visit root_path
+    user = FactoryGirl.create(:user)
+    visit root_path(as: user)
 
     click_link ("Profile")
 

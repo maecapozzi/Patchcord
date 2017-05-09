@@ -14302,3 +14302,562 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 52ms (Views: 48.8ms | ActiveRecord: 1.0ms)
 
 
+** [Honeybadger] Initializing Honeybadger Error Tracker for Ruby. Ship it! version=3.1.1 framework=rails level=1 pid=10672
+** [Honeybadger] Entering development mode: data will not be reported. level=2 pid=10672
+Started GET "/" for ::1 at 2017-05-08 18:27:44 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendering layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "c06486081d68e687b1b750bf3a074dd5c590958f"], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (33.3ms)
+  Rendered application/_flashes.html.erb (1.0ms)
+  Rendered application/_analytics.html.erb (0.8ms)
+  Rendered application/_javascript.html.erb (31.7ms)
+  Rendered application/_css_overrides.html.erb (0.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "c06486081d68e687b1b750bf3a074dd5c590958f"], ["LIMIT", 1]]
+  Rendered layouts/application.html.erb (661.6ms)
+Completed 200 OK in 671ms (Views: 665.3ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/sign_in" for ::1 at 2017-05-08 18:30:09 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Clearance::SessionsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "c06486081d68e687b1b750bf3a074dd5c590958f"], ["LIMIT", 1]]
+  Rendering layouts/application.html.erb
+  Rendering /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/clearance-1.15.1/app/views/sessions/new.html.erb within layouts/application
+  Rendered sessions/_form.html.erb (16.1ms)
+  Rendered /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/clearance-1.15.1/app/views/sessions/new.html.erb within layouts/application (363.5ms)
+  Rendered application/_flashes.html.erb (0.8ms)
+  Rendered application/_analytics.html.erb (0.7ms)
+  Rendered application/_javascript.html.erb (17.2ms)
+  Rendered application/_css_overrides.html.erb (0.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "c06486081d68e687b1b750bf3a074dd5c590958f"], ["LIMIT", 1]]
+  Rendered layouts/application.html.erb (532.8ms)
+Completed 200 OK in 571ms (Views: 543.6ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/sign_up" for ::1 at 2017-05-08 18:30:13 -0400
+Processing by Clearance::UsersController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "c06486081d68e687b1b750bf3a074dd5c590958f"], ["LIMIT", 1]]
+  Rendering layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (1.7ms)
+  Rendered users/new.html.erb within layouts/application (6.1ms)
+  Rendered application/_flashes.html.erb (0.5ms)
+  Rendered application/_analytics.html.erb (0.4ms)
+  Rendered application/_javascript.html.erb (17.0ms)
+  Rendered application/_css_overrides.html.erb (0.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "c06486081d68e687b1b750bf3a074dd5c590958f"], ["LIMIT", 1]]
+  Rendered layouts/application.html.erb (45.6ms)
+Completed 200 OK in 64ms (Views: 51.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for ::1 at 2017-05-08 18:30:47 -0400
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"[FILTERED]", "user"=>{"first_name"=>"Mike", "last_name"=>"Burns", "email"=>"patchcord@mike-burns.com", "password"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "c06486081d68e687b1b750bf3a074dd5c590958f"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "patchcord@mike-burns.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "first_name", "last_name", "created_at", "updated_at", "encrypted_password", "remember_token") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "patchcord@mike-burns.com"], ["first_name", "Mike"], ["last_name", "Burns"], ["created_at", 2017-05-08 22:30:47 UTC], ["updated_at", 2017-05-08 22:30:47 UTC], ["encrypted_password", "$2a$10$dpxFm4tSs37vE/IPx8BA/e2Bo8w7TAK7ZgUAdi1//tj.rqNIxexEi"], ["remember_token", "1763d53a1002b4caca35d35c7853a9366cdbd3c9"]]
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 177ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/" for ::1 at 2017-05-08 18:30:47 -0400
+Processing by HomeController#index as HTML
+  Rendering layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "1763d53a1002b4caca35d35c7853a9366cdbd3c9"], ["LIMIT", 1]]
+  Rendered home/index.html.erb within layouts/application (2.8ms)
+  Rendered application/_flashes.html.erb (0.4ms)
+  Rendered application/_analytics.html.erb (0.3ms)
+  Rendered application/_javascript.html.erb (8.0ms)
+  Rendered application/_css_overrides.html.erb (0.3ms)
+  Rendered layouts/application.html.erb (24.5ms)
+Completed 200 OK in 29ms (Views: 27.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users?utf8=%E2%9C%93&search=1&searching_for=1&commit=Search" for ::1 at 2017-05-08 18:30:55 -0400
+Processing by UsersController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"1", "searching_for"=>"1", "commit"=>"Search"}
+  Rendering layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", "musician"]]
+  Rendered users/index.html.erb within layouts/application (5.1ms)
+  Rendered application/_flashes.html.erb (0.5ms)
+  Rendered application/_analytics.html.erb (0.4ms)
+  Rendered application/_javascript.html.erb (12.6ms)
+  Rendered application/_css_overrides.html.erb (0.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "1763d53a1002b4caca35d35c7853a9366cdbd3c9"], ["LIMIT", 1]]
+  Rendered layouts/application.html.erb (50.4ms)
+Completed 200 OK in 59ms (Views: 56.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/1" for ::1 at 2017-05-08 18:31:14 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUserGenre Load (0.5ms)[0m  [1m[34mSELECT "user_genres".* FROM "user_genres" WHERE "user_genres"."user_id" = $1[0m  [["user_id", 1]]
+  Rendering layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGenre Load (0.4ms)[0m  [1m[34mSELECT "genres".* FROM "genres" WHERE "genres"."id" = $1[0m  [["id", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "1763d53a1002b4caca35d35c7853a9366cdbd3c9"], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (6.7ms)
+  Rendered application/_flashes.html.erb (0.4ms)
+  Rendered application/_analytics.html.erb (0.3ms)
+  Rendered application/_javascript.html.erb (12.4ms)
+  Rendered application/_css_overrides.html.erb (0.3ms)
+  Rendered layouts/application.html.erb (45.4ms)
+Completed 200 OK in 75ms (Views: 51.6ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/users/42" for ::1 at 2017-05-08 18:31:24 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"42"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  [1m[36mUserGenre Load (0.2ms)[0m  [1m[34mSELECT "user_genres".* FROM "user_genres" WHERE "user_genres"."user_id" = $1[0m  [["user_id", 42]]
+  Rendering layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "1763d53a1002b4caca35d35c7853a9366cdbd3c9"], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (2.3ms)
+  Rendered application/_flashes.html.erb (0.5ms)
+  Rendered application/_analytics.html.erb (0.3ms)
+  Rendered application/_javascript.html.erb (11.0ms)
+  Rendered application/_css_overrides.html.erb (0.3ms)
+  Rendered layouts/application.html.erb (40.8ms)
+Completed 200 OK in 51ms (Views: 47.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/42" for ::1 at 2017-05-08 18:31:30 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"42"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  [1m[36mUserGenre Load (0.2ms)[0m  [1m[34mSELECT "user_genres".* FROM "user_genres" WHERE "user_genres"."user_id" = $1[0m  [["user_id", 42]]
+  Rendering layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "1763d53a1002b4caca35d35c7853a9366cdbd3c9"], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (2.5ms)
+  Rendered application/_flashes.html.erb (0.6ms)
+  Rendered application/_analytics.html.erb (0.3ms)
+  Rendered application/_javascript.html.erb (12.2ms)
+  Rendered application/_css_overrides.html.erb (0.4ms)
+  Rendered layouts/application.html.erb (44.5ms)
+Completed 200 OK in 54ms (Views: 50.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/42/edit" for ::1 at 2017-05-08 18:31:32 -0400
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"42"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "1763d53a1002b4caca35d35c7853a9366cdbd3c9"], ["LIMIT", 1]]
+  Rendering layouts/application.html.erb
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/edit.html.erb within layouts/application (10.5ms)
+  Rendered application/_flashes.html.erb (0.5ms)
+  Rendered application/_analytics.html.erb (0.5ms)
+  Rendered application/_javascript.html.erb (13.1ms)
+  Rendered application/_css_overrides.html.erb (0.3ms)
+  Rendered layouts/application.html.erb (51.3ms)
+Completed 200 OK in 62ms (Views: 59.7ms | ActiveRecord: 0.7ms)
+
+
+** [Honeybadger] Initializing Honeybadger Error Tracker for Ruby. Ship it! version=3.1.1 framework=rails level=1 pid=11194
+** [Honeybadger] Entering development mode: data will not be reported. level=2 pid=11194
+** [Honeybadger] Initializing Honeybadger Error Tracker for Ruby. Ship it! version=3.1.1 framework=rails level=1 pid=11247
+** [Honeybadger] Entering development mode: data will not be reported. level=2 pid=11247
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(430504088990298855);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DropLinks (20170508224825)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.2ms)[0m  [1m[35mDROP TABLE "links"[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170508224825"]]
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(430504088990298855)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+** [Honeybadger] Initializing Honeybadger Error Tracker for Ruby. Ship it! version=3.1.1 framework=rails level=1 pid=11296
+** [Honeybadger] Entering development mode: data will not be reported. level=2 pid=11296
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(430504088990298855);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DropLinks (20170508224825)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(430504088990298855)[0m
+** [Honeybadger] Unable to send error report: API key is missing. id=d38fae0a-91af-4b3e-89ba-a1338d0d0c02 level=3 pid=11296
+** [Honeybadger] Initializing Honeybadger Error Tracker for Ruby. Ship it! version=3.1.1 framework=rails level=1 pid=11353
+** [Honeybadger] Entering development mode: data will not be reported. level=2 pid=11353
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(430504088990298855);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DropLinks (20170508224825)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (8.8ms)[0m  [1m[35mCREATE TABLE "links" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20170508224825"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(430504088990298855)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(430504088990298855);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DropLinks (20170508224825)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE "links"[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170508224825"]]
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(430504088990298855)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+** [Honeybadger] Initializing Honeybadger Error Tracker for Ruby. Ship it! version=3.1.1 framework=rails level=1 pid=11408
+** [Honeybadger] Entering development mode: data will not be reported. level=2 pid=11408
+** [Honeybadger] Initializing Honeybadger Error Tracker for Ruby. Ship it! version=3.1.1 framework=rails level=1 pid=11467
+** [Honeybadger] Entering development mode: data will not be reported. level=2 pid=11467
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(430504088990298855);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DropInstruments (20170508225030)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[35mDROP TABLE "instruments"[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170508225030"]]
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(430504088990298855)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+** [Honeybadger] Initializing Honeybadger Error Tracker for Ruby. Ship it! version=3.1.1 framework=rails level=1 pid=11521
+** [Honeybadger] Entering development mode: data will not be reported. level=2 pid=11521
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(430504088990298855);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DropInstruments (20170508225030)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (10.6ms)[0m  [1m[35mCREATE TABLE "instruments" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20170508225030"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(430504088990298855)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(430504088990298855);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to DropInstruments (20170508225030)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[35mDROP TABLE "instruments"[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20170508225030"]]
+  [1m[35m (8.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(430504088990298855)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+** [Honeybadger] Initializing Honeybadger Error Tracker for Ruby. Ship it! version=3.1.1 framework=rails level=1 pid=11952
+** [Honeybadger] Entering development mode: data will not be reported. level=2 pid=11952
+Started GET "/" for ::1 at 2017-05-08 19:19:40 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  Rendering layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", "booker"]]
+  Rendered users/index.html.erb within layouts/application (44.2ms)
+  Rendered application/_flashes.html.erb (0.5ms)
+  Rendered application/_analytics.html.erb (0.6ms)
+  Rendered application/_javascript.html.erb (19.7ms)
+  Rendered application/_css_overrides.html.erb (0.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "1763d53a1002b4caca35d35c7853a9366cdbd3c9"], ["LIMIT", 1]]
+  Rendered layouts/application.html.erb (626.2ms)
+Completed 200 OK in 663ms (Views: 635.1ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/" for ::1 at 2017-05-08 19:19:51 -0400
+Processing by UsersController#index as HTML
+  Rendering layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", "booker"]]
+  Rendered users/index.html.erb within layouts/application (5.0ms)
+  Rendered application/_flashes.html.erb (0.6ms)
+  Rendered application/_analytics.html.erb (0.3ms)
+  Rendered application/_javascript.html.erb (11.4ms)
+  Rendered application/_css_overrides.html.erb (0.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "1763d53a1002b4caca35d35c7853a9366cdbd3c9"], ["LIMIT", 1]]
+  Rendered layouts/application.html.erb (46.5ms)
+Completed 200 OK in 55ms (Views: 52.7ms | ActiveRecord: 0.9ms)
+
+
+** [Honeybadger] Initializing Honeybadger Error Tracker for Ruby. Ship it! version=3.1.1 framework=rails level=1 pid=12088
+** [Honeybadger] Entering development mode: data will not be reported. level=2 pid=12088
+** [Honeybadger] Unable to send error report: API key is missing. id=8a729cc7-5e78-4a0f-b3f0-047c37d111a9 level=3 pid=12128
+** [Honeybadger] Initializing Honeybadger Error Tracker for Ruby. Ship it! version=3.1.1 framework=rails level=1 pid=12156
+** [Honeybadger] Entering development mode: data will not be reported. level=2 pid=12156
+Started GET "/" for ::1 at 2017-05-08 19:23:46 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"home"}
+Completed 404 Not Found in 5ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::RoutingError (No such page: home):
+  
+high_voltage (3.0.0) app/controllers/concerns/high_voltage/static_page.rb:23:in `invalid_page'
+high_voltage (3.0.0) app/controllers/concerns/high_voltage/static_page.rb:9:in `block (2 levels) in <module:StaticPage>'
+activesupport (5.0.2) lib/active_support/rescuable.rb:109:in `instance_exec'
+activesupport (5.0.2) lib/active_support/rescuable.rb:109:in `block in handler_for_rescue'
+activesupport (5.0.2) lib/active_support/rescuable.rb:89:in `rescue_with_handler'
+activesupport (5.0.2) lib/active_support/rescuable.rb:158:in `rescue_with_handler'
+actionpack (5.0.2) lib/action_controller/metal/rescue.rb:23:in `rescue in process_action'
+actionpack (5.0.2) lib/action_controller/metal/rescue.rb:20:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `block in instrument'
+activesupport (5.0.2) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+activesupport (5.0.2) lib/active_support/notifications.rb:164:in `instrument'
+actionpack (5.0.2) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+actionpack (5.0.2) lib/action_controller/metal/params_wrapper.rb:248:in `process_action'
+activerecord (5.0.2) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+actionpack (5.0.2) lib/abstract_controller/base.rb:126:in `process'
+actionview (5.0.2) lib/action_view/rendering.rb:30:in `process'
+actionpack (5.0.2) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (5.0.2) lib/action_controller/metal.rb:262:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:39:in `block in serve'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `each'
+actionpack (5.0.2) lib/action_dispatch/journey/router.rb:26:in `serve'
+actionpack (5.0.2) lib/action_dispatch/routing/route_set.rb:725:in `call'
+bullet (5.5.1) lib/bullet/rack.rb:12:in `call'
+clearance (1.15.1) lib/clearance/rack_session.rb:23:in `call'
+rack (2.0.1) lib/rack/etag.rb:25:in `call'
+rack (2.0.1) lib/rack/conditional_get.rb:25:in `call'
+rack (2.0.1) lib/rack/head.rb:12:in `call'
+rack (2.0.1) lib/rack/session/abstract/id.rb:222:in `context'
+rack (2.0.1) lib/rack/session/abstract/id.rb:216:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/cookies.rb:613:in `call'
+activerecord (5.0.2) lib/active_record/migration.rb:553:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:38:in `block in call'
+activesupport (5.0.2) lib/active_support/callbacks.rb:97:in `__run_callbacks__'
+activesupport (5.0.2) lib/active_support/callbacks.rb:750:in `_run_call_callbacks'
+activesupport (5.0.2) lib/active_support/callbacks.rb:90:in `run_callbacks'
+actionpack (5.0.2) lib/action_dispatch/middleware/callbacks.rb:36:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:49:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.1) lib/rack/method_override.rb:22:in `call'
+rack (2.0.1) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
+honeybadger (3.1.1) lib/honeybadger/rack/error_notifier.rb:34:in `block in call'
+honeybadger (3.1.1) lib/honeybadger/agent.rb:321:in `with_rack_env'
+honeybadger (3.1.1) lib/honeybadger/rack/error_notifier.rb:31:in `call'
+honeybadger (3.1.1) lib/honeybadger/rack/user_feedback.rb:31:in `call'
+honeybadger (3.1.1) lib/honeybadger/rack/user_informer.rb:21:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+puma (3.8.2) lib/puma/configuration.rb:224:in `call'
+puma (3.8.2) lib/puma/server.rb:600:in `handle_request'
+puma (3.8.2) lib/puma/server.rb:435:in `process_client'
+puma (3.8.2) lib/puma/server.rb:299:in `block in run'
+puma (3.8.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  Rendering /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/layout.erb
+  Rendering /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered collection of /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [21 times] (6.2ms)
+  Rendered /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (12.0ms)
+  Rendering /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (11.9ms)
+  Rendered /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (107.0ms)
+  Rendered /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/layout.erb (109.3ms)
+** [Honeybadger] Unable to send error report: API key is missing. id=d9f940c3-2e75-47fa-9c24-3dec26daa531 level=3 pid=12198
+Started GET "/" for ::1 at 2017-05-08 19:24:28 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"home"}
+  Rendering layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "1763d53a1002b4caca35d35c7853a9366cdbd3c9"], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (34.8ms)
+  Rendered application/_flashes.html.erb (0.5ms)
+  Rendered application/_analytics.html.erb (0.8ms)
+  Rendered application/_javascript.html.erb (15.8ms)
+  Rendered application/_css_overrides.html.erb (0.5ms)
+  Rendered layouts/application.html.erb (563.0ms)
+Completed 200 OK in 568ms (Views: 563.6ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/" for ::1 at 2017-05-08 19:26:42 -0400
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"home"}
+  Rendering layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "1763d53a1002b4caca35d35c7853a9366cdbd3c9"], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (34.3ms)
+  Rendered application/_flashes.html.erb (0.6ms)
+  Rendered application/_analytics.html.erb (0.7ms)
+  Rendered application/_javascript.html.erb (24.0ms)
+  Rendered application/_css_overrides.html.erb (0.8ms)
+  Rendered layouts/application.html.erb (599.2ms)
+Completed 200 OK in 602ms (Views: 597.4ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/users?utf8=%E2%9C%93&search=1&searching_for=1&commit=Search" for ::1 at 2017-05-08 19:26:45 -0400
+Processing by UsersController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"1", "searching_for"=>"1", "commit"=>"Search"}
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `filter' for #<Class:0x007fa662ace260>):
+  
+app/controllers/users_controller.rb:3:in `index'
+  Rendering /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/layout.erb
+  Rendering /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (19.7ms)
+  Rendering /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendering /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (79.0ms)
+  Rendered /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/layout.erb (81.9ms)
+** [Honeybadger] Unable to send error report: API key is missing. id=2a8582b1-034f-4cff-8efa-d3b6bf1a7d22 level=3 pid=12198
+Started GET "/" for ::1 at 2017-05-08 19:30:03 -0400
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"home"}
+  Rendering layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "1763d53a1002b4caca35d35c7853a9366cdbd3c9"], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (14.1ms)
+  Rendered application/_flashes.html.erb (0.5ms)
+  Rendered application/_analytics.html.erb (0.4ms)
+  Rendered application/_javascript.html.erb (10.6ms)
+  Rendered application/_css_overrides.html.erb (0.3ms)
+  Rendered layouts/application.html.erb (37.8ms)
+Completed 200 OK in 40ms (Views: 37.1ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/users?utf8=%E2%9C%93&search=2&searching_for=2&commit=Search" for ::1 at 2017-05-08 19:33:04 -0400
+Processing by UsersController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"2", "searching_for"=>"2", "commit"=>"Search"}
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `filter' for #<Class:0x007fa66a48ca48>):
+  
+app/controllers/users_controller.rb:3:in `index'
+  Rendering /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/layout.erb
+  Rendering /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.1ms)
+  Rendering /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendering /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (67.2ms)
+  Rendered /Users/maecapozzi/.rbenv/versions/2.4.1/lib/ruby/gems/2.4.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/layout.erb (69.8ms)
+** [Honeybadger] Unable to send error report: API key is missing. id=bc03a418-3387-4746-8b12-a04165fdd137 level=3 pid=12197
+** [Honeybadger] Unable to send error report: API key is missing. id=24b0d126-67c6-463c-8e74-1e5fe69b1a7e level=3 pid=12198
+** [Honeybadger] Initializing Honeybadger Error Tracker for Ruby. Ship it! version=3.1.1 framework=rails level=1 pid=13596
+** [Honeybadger] Entering development mode: data will not be reported. level=2 pid=13596
+Started GET "/" for ::1 at 2017-05-08 20:00:09 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"home"}
+  Rendering layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "1763d53a1002b4caca35d35c7853a9366cdbd3c9"], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (62.7ms)
+  Rendered application/_flashes.html.erb (0.8ms)
+  Rendered application/_analytics.html.erb (1.1ms)
+  Rendered application/_javascript.html.erb (32.0ms)
+  Rendered application/_css_overrides.html.erb (0.4ms)
+  Rendered layouts/application.html.erb (661.8ms)
+Completed 200 OK in 668ms (Views: 661.6ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/users/42" for ::1 at 2017-05-08 20:00:11 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"42"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 42], ["LIMIT", 1]]
+  Rendering layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGenre Load (0.6ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "user_genres" ON "genres"."id" = "user_genres"."genre_id" WHERE "user_genres"."user_id" = $1[0m  [["user_id", 42]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "1763d53a1002b4caca35d35c7853a9366cdbd3c9"], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (16.5ms)
+  Rendered application/_flashes.html.erb (0.9ms)
+  Rendered application/_analytics.html.erb (0.5ms)
+  Rendered application/_javascript.html.erb (14.3ms)
+  Rendered application/_css_overrides.html.erb (0.6ms)
+  Rendered layouts/application.html.erb (95.6ms)
+Completed 200 OK in 155ms (Views: 105.8ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/users?utf8=%E2%9C%93&search=Musician&searching_for=Booker&commit=Search" for ::1 at 2017-05-08 20:00:24 -0400
+Processing by UsersController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Musician", "searching_for"=>"Booker", "commit"=>"Search"}
+  Rendering layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", "booker"]]
+  Rendered users/index.html.erb within layouts/application (5.3ms)
+  Rendered application/_flashes.html.erb (0.5ms)
+  Rendered application/_analytics.html.erb (0.5ms)
+  Rendered application/_javascript.html.erb (21.2ms)
+  Rendered application/_css_overrides.html.erb (0.3ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "1763d53a1002b4caca35d35c7853a9366cdbd3c9"], ["LIMIT", 1]]
+  Rendered layouts/application.html.erb (77.3ms)
+Completed 200 OK in 94ms (Views: 90.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/11" for ::1 at 2017-05-08 20:00:27 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mGenre Load (0.4ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "user_genres" ON "genres"."id" = "user_genres"."genre_id" WHERE "user_genres"."user_id" = $1[0m  [["user_id", 11]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "1763d53a1002b4caca35d35c7853a9366cdbd3c9"], ["LIMIT", 1]]
+  Rendered users/show.html.erb within layouts/application (3.5ms)
+  Rendered application/_flashes.html.erb (0.7ms)
+  Rendered application/_analytics.html.erb (0.4ms)
+  Rendered application/_javascript.html.erb (13.8ms)
+  Rendered application/_css_overrides.html.erb (0.4ms)
+  Rendered layouts/application.html.erb (54.9ms)
+Completed 200 OK in 65ms (Views: 61.8ms | ActiveRecord: 1.0ms)
+
+
+** [Honeybadger] Unable to send error report: API key is missing. id=a5be96ee-d655-4bca-b35d-f6f7ad31ca32 level=3 pid=13638
+** [Honeybadger] Initializing Honeybadger Error Tracker for Ruby. Ship it! version=3.1.1 framework=rails level=1 pid=13942
+** [Honeybadger] Entering development mode: data will not be reported. level=2 pid=13942
+** [Honeybadger] Initializing Honeybadger Error Tracker for Ruby. Ship it! version=3.1.1 framework=rails level=1 pid=13990
+** [Honeybadger] Entering development mode: data will not be reported. level=2 pid=13990
+Started GET "/" for ::1 at 2017-05-08 20:06:04 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HighVoltage::PagesController#show as HTML
+  Parameters: {"id"=>"home"}
+  Rendering layouts/application.html.erb
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."remember_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["remember_token", "1763d53a1002b4caca35d35c7853a9366cdbd3c9"], ["LIMIT", 1]]
+  Rendered pages/home.html.erb within layouts/application (56.6ms)
+  Rendered application/_flashes.html.erb (0.9ms)
+  Rendered application/_analytics.html.erb (1.2ms)
+  Rendered application/_javascript.html.erb (26.6ms)
+  Rendered application/_css_overrides.html.erb (0.5ms)
+  Rendered layouts/application.html.erb (657.9ms)
+Completed 200 OK in 664ms (Views: 659.2ms | ActiveRecord: 4.3ms)
+
+

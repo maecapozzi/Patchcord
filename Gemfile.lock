@@ -111,6 +111,7 @@ GEM
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     hashdiff (0.3.2)
+    high_voltage (3.0.0)
     honeybadger (3.1.1)
     i18n (0.8.1)
     jquery-rails (4.3.1)
@@ -286,6 +287,7 @@ DEPENDENCIES
   faker
   flutie
   formulaic
+  high_voltage (~> 3.0.0)
   honeybadger
   jquery-rails
   launchy

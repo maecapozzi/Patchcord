@@ -8,8 +8,7 @@ module Features
 
     def sign_in
       password = "password"
-      email =  Faker::Internet.email
-      user = FactoryGirl.create(:user, first_name: "Mae", last_name: "Capozzi", email: email, password: password)
+      user = FactoryGirl.create(:user, password: password)
       sign_in_with user.email, password
     end
 
@@ -41,9 +40,7 @@ module Features
     end
 
     def user_with_reset_password
-      password = "password"
-      email =  Faker::Internet.email
-      user = FactoryGirl.create(:user, email: email, password: password)
+      user = FactoryGirl.create(:user)
       reset_password_for user.email
       user.reload
     end
